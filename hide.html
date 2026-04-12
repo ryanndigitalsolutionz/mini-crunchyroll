@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AnimeBox</title>
+    <link rel="stylesheet" href="frame.css">
+</head>
+<body>
+
+    <header>
+        <h1>Trending Now</h1>
+    </header>
+
+    <main id="anime-render-grid">
+        <p class="loading-text">Fetching the latest scrolls...</p>
+    </main>
+
+    <section id="my-vault">
+        <h2>My Watchlist</h2>
+        <div id="vault-list"></div>
+    </section>
+
+    <nav class="bottom-nav">
+        <div class="search-box">
+            <input type="text" id="search-input" placeholder="Search anime...">
+            <button id="search-btn">🔍</button>
+        </div>
+    </nav>
+
+    <script src="flash.js"></script>
+</body>
+</html>

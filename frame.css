@@ -1,0 +1,119 @@
+/* GLOBAL STYLES */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #121212; /* Dark base from image */
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-bottom: 100px; /* Space for fixed bottom bar */
+    overflow-x: hidden;
+}
+
+/* 1. THE CURLY HOMEPAGE BACKGROUND (Section-Specific) */
+#home-screen {
+    background-color: #121212;
+    background-image: 
+        radial-gradient(at 10% 10%, #0c3c3d 0px, transparent 50%),
+        radial-gradient(at 90% 90%, #1a4f50 0px, transparent 50%),
+        linear-gradient(130deg, #121212 0%, #0c3c3d 40%, #1a4f50 80%, #121212 100%);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    
+    /* Centering the content in this section */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Start from top, but center items horizontally */
+    min-height: 100vh;
+    padding-top: 50px; /* Give titles some breathing room */
+}
+
+/* 2. THE GRID LAYOUT (CENTERED) */
+#anime-render-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto; /* Centered with top/bottom margin */
+    justify-content: center;
+}
+
+/* 3. ROUNDED IMAGES & CARDS */
+.anime-card {
+    background: rgba(255,255,255,0.05); /* Very subtle card back */
+    border-radius: 16px; /* Match your wavy feel */
+    overflow: hidden; /* Important for rounded child images */
+    transition: transform 0.3s ease;
+    text-align: center;
+    padding: 10px;
+}
+
+.anime-card:hover {
+    transform: translateY(-5px) scale(1.02);
+}
+
+.anime-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 12px; /* The rounded images rule! */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.anime-card h3 {
+    margin-top: 15px;
+    font-size: 1.1rem;
+    padding: 0 5px;
+}
+
+/* 4. THE BOTTOM SEARCH BAR (CENTERED CONTENT) */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: rgba(20, 20, 20, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 15px 0;
+    display: flex;
+    justify-content: center; /* Center the search box itself */
+    align-items: center;
+    border-top: 1px solid #333;
+    z-index: 1000;
+}
+
+.search-box {
+    display: flex;
+    gap: 10px;
+    width: 90%; /* Takes up most of the centered space */
+    max-width: 600px; /* Prevents it from getting too wide */
+    justify-content: center;
+}
+
+#search-input {
+    flex-grow: 1; /* Input fills available space */
+    padding: 12px;
+    border-radius: 30px; /* Curly feel */
+    border: 2px solid #333;
+    background: #222;
+    color: white;
+    outline: none;
+}
+
+#search-input:focus {
+    border-color: #1a4f50; /* Light teal on focus */
+}
+
+#search-btn {
+    padding: 12px 20px;
+    background: #1a4f50; /* The teal from image */
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+}
