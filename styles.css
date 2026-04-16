@@ -117,6 +117,8 @@ body {
     cursor: pointer;
 }
 
+/* 5. If I need  the right frame on my phone... */
+
 * { box-sizing: border-box; }
 meta[name="viewport"] { content: "width=device-width, initial-scale=1.0"; }
 
