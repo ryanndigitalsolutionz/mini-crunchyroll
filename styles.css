@@ -1,4 +1,3 @@
-/* GLOBAL STYLES */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -8,7 +7,7 @@
 body {
     background-color: #121212; /* Dark base from image */
     color: white;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Audiowide", sans-serif;
     padding-bottom: 100px; /* Space for fixed bottom bar */
     overflow-x: hidden;
 }
@@ -47,8 +46,8 @@ body {
 /* 3. ROUNDED IMAGES & CARDS */
 .anime-card {
     background: rgba(255,255,255,0.05); /* Very subtle card back */
-    border-radius: 16px; /* Match your wavy feel */
-    overflow: hidden; /* Important for rounded child images */
+    border-radius: 16px;
+    overflow: hidden; 
     transition: transform 0.3s ease;
     text-align: center;
     padding: 10px;
@@ -117,3 +116,28 @@ body {
     border-radius: 30px;
     cursor: pointer;
 }
+
+* { box-sizing: border-box; }
+meta[name="viewport"] { content: "width=device-width, initial-scale=1.0"; }
+
+body { margin: 0; font-family: sans-serif; background: #121212; color: white; }
+
+#anime-render-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.anime-card {
+    background: #1e1e1e;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #333;
+    display: flex;
+    flex-direction: column;
+}
+
+.anime-card img { width: 100%; height: 300px; object-fit: cover; }
+.anime-card h3, .anime-card p { padding: 10px; margin: 0; }
+.add-btn { background: #ff4757; color: white; border: none; padding: 12px; cursor: pointer; }
