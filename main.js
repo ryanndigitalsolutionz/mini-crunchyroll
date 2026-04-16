@@ -1,3 +1,8 @@
+// My step-by-step list for my AnimExplorer project:
+// Basic Fetch, Post, Update anfd Delete (basically CRUD 😏)
+
+// The API I used here was Kitsu API (this is a "by the way" 🤦🏾‍♂️)
+
 // 1. THE ADDRESS BOOK
 // Create a variable to hold the Kitsu URL string.
 // Create an empty Array [] called 'myVault' to store saved anime.
